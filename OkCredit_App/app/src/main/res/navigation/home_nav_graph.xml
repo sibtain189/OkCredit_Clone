@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.okcredit_app.HomeFragments.HomeFragment"
+        android:label="Welcome"
+        tools:layout="@layout/fragment_home" />
+    <activity
+        android:id="@+id/loginActivity"
+        android:name="com.example.okcredit_app.LoginActivity"
+        android:label="activity_login"
+        tools:layout="@layout/activity_login" />
+    <fragment
+        android:id="@+id/accountFragment"
+        android:name="com.example.okcredit_app.HomeFragment.DrawerFragment.AccountFragment"
+        android:label="Account" />
+    <fragment
+        android:id="@+id/helpSupportFragment"
+        android:name="com.example.okcredit_app.HomeFragment.DrawerFragment.HelpSupportFragment"
+        android:label="Help &amp; Support" />
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.example.okcredit_app.HomeFragment.DrawerFragment.SettingFragment"
+        android:label="Sttings">
+        <action
+            android:id="@+id/action_settingFragment_to_loginActivity"
+            app:destination="@id/loginActivity"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/shareFragment"
+        android:name="com.example.okcredit_app.HomeFragment.DrawerFragment.ShareFragment"
+        android:label="Share" />
+    <fragment
+        android:id="@+id/customerFragment"
+        android:name="com.example.okcredit_app.HomeFragments.TabFragments.CustomerFragment"
+        android:label="Customer"
+        tools:layout="@layout/fragment_customer" />
+    <fragment
+        android:id="@+id/supllierFragment"
+        android:name="com.example.okcredit_app.HomeFragments.TabFragments.SupllierFragment"
+        android:label="Supplier"
+        tools:layout="@layout/fragment_supplier" />
+    <fragment
+        android:id="@+id/insideCustomerFragment"
+        android:name="com.example.okcredit_app.HomeFragments.TabFragments.AddCustomerFragment"
+        android:label="Customer"
+        tools:layout="@layout/fragment_add_customer" />
+    <fragment
+        android:id="@+id/insidesupplierFragment"
+        android:name="com.example.okcredit_app.HomeFragments.TabFragments.AddSupplierFragment"
+        tools:layout="@layout/fragment_add_supplier" />
+    <action
+        android:id="@+id/action_global_supllierFragment"
+        app:destination="@id/supllierFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right"/>
+    <action
+        android:id="@+id/action_global_customerFragment"
+        app:destination="@id/customerFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right"/>
+    <action
+        android:id="@+id/action_global_insidesupplierFragment"
+        app:destination="@id/insidesupplierFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right"/>
+    <action
+        android:id="@+id/action_global_insideCustomerFragment"
+        app:destination="@id/insideCustomerFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right"/>
+    <action
+        android:id="@+id/action_global_helpSupportFragment"
+        app:destination="@id/helpSupportFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right"/>
+    <fragment
+        android:id="@+id/customerPersonFragment"
+        android:name="com.example.okcredit_app.HomeFragments.TabFragments.CustomerPersonFragment"
+        android:label="Transactions"
+        tools:layout="@layout/fragment_person_customer">
+        <argument
+            android:name="CustomerName"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_customerPersonFragment_to_profileActivity"
+            app:destination="@id/profileActivity"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <action
+        android:id="@+id/action_global_customerPersonFragment"
+        app:destination="@id/customerPersonFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right"/>
+    <fragment
+        android:id="@+id/supplierPersonFragment"
+        android:name="com.example.okcredit_app.HomeFragments.TabFragments.SupplierPersonFragment"
+        android:label="Transactions"
+        tools:layout="@layout/fragment_person_supplier">
+        <argument
+            android:name="SupplierName"
+            app:argType="string" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_supplierPersonFragment"
+        app:destination="@id/supplierPersonFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right"/>
+
+    <activity
+        android:id="@+id/profileActivity"
+        android:name="com.example.okcredit_app.ProfileActivity"
+        android:label="activity_profile"
+        tools:layout="@layout/activity_profile" /><action android:id="@+id/action_global_homeFragment" app:destination="@id/homeFragment"/>
+</navigation>

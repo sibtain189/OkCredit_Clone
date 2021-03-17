@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <LinearLayout
+        android:id="@+id/ll_layout_credit"
+        android:layout_width="match_parent"
+        android:layout_above="@id/ll_layout_bar"
+        android:layout_height="wrap_content"
+        android:background="#E4E4E4"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_credit_Amt"
+            android:inputType="number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight=".7"
+            android:textColorHint="#FF7043"
+            android:drawablePadding="10dp"
+            android:textColor="#FF7043"
+            android:drawableStart="@drawable/ic_baseline_arrow_downward_24"
+            android:background="@drawable/round_button"
+            android:backgroundTint="@android:color/white"
+            android:hint="Type  Amount..."
+            android:padding="10dp"
+            android:singleLine="true" />
+
+        <Button
+            android:id="@+id/btn_credit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:backgroundTint="#FF7043"
+            android:text="Credit"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_layout_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#E4E4E4"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_pay_Amt"
+            android:inputType="number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight=".7"
+            android:textColorHint="#4CAF50"
+            android:textColor="#4CAF50"
+            android:drawablePadding="10dp"
+            android:drawableStart="@drawable/ic_baseline_arrow_upward_24"
+            android:background="@drawable/round_button"
+            android:backgroundTint="@android:color/white"
+            android:hint="Type  Amount..."
+            android:padding="10dp"
+            android:singleLine="true" />
+
+        <Button
+            android:id="@+id/btn_payment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+
+            android:backgroundTint="#4CAF50"
+            android:text="Payment"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_messages"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:itemCount="20"
+        android:layout_above="@id/ll_layout_credit"
+        android:layout_below="@+id/dark_divider"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/white"
+        android:id="@+id/dark_divider"/>
+
+
+</RelativeLayout>

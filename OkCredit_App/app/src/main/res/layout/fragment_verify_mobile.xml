@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".VerifyMobileFragment">
+
+
+   <androidx.viewpager2.widget.ViewPager2
+       android:id="@+id/verifyViewPager"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"/>
+   
+   <com.google.android.material.tabs.TabLayout
+       android:id="@+id/verifyTabLayout"
+       android:layout_width="wrap_content"
+       android:layout_marginStart="15dp"
+       android:layout_height="wrap_content"
+       app:tabGravity="start"
+       android:layout_marginTop="140dp"
+       app:tabIndicatorHeight="0dp"
+       android:background="#ffffff"
+       app:tabBackground="@drawable/tab_page_selecter"
+       />
+
+   <TextView
+       android:id="@+id/tvVerify"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_alignParentBottom="true"
+       android:text="Verify Mobile"
+       android:textSize="13sp"
+       android:layout_marginBottom="40dp"
+       android:textStyle="bold"
+       android:layout_above="@id/verifyStatement"
+       android:paddingStart="120dp"
+       android:paddingTop="15dp"
+       android:paddingBottom="15dp"
+       android:textColor="@color/white"
+       android:layout_marginStart="15dp"
+       android:layout_marginEnd="15dp"
+       android:drawableStart="@drawable/ic_baseline_verified_user_24"
+       android:drawablePadding="5dp"
+       android:background="@drawable/next_rectaangle_green"
+       />
+
+   <TextView
+       android:id="@+id/verifyStatement"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignParentBottom="true"
+       android:layout_marginTop="30dp"
+       android:textSize="10sp"
+       android:layout_centerInParent="true"
+       android:textAlignment="center"
+       android:layout_marginBottom="10dp"
+       android:textColor="@color/black"
+       android:text="By countinuing, you agree to our Term of services and privacy policy"
+       />
+
+</RelativeLayout>

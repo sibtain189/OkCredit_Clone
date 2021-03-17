@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">OkCredit_App</string>
+    <string name="sentence_Digital_fragment">Get rid of your old Bahi-Khata. Opt for new digital &amp; forever Bahi-Khata</string>
+    <string name="sentence_Great_fragment">Send updates of transactions to customers and maintain a transparent &amp; happy bond</string>
+    <string name="sentence_Safe_fragment">Use on multiple devices. Setup app lock &amp; Download backup without worrying about loosing data</string>
+    <string name="sentence_Timely_fragment">Forget the stress of door to door collection, Use payment reminders to collect dues &amp; save time!</string>
+    <string name="sentence_give_fragment">An OTP will be send on the mentioned mobile number to verify the user</string>
+    <string name="sentence_otp_fragment">Your OTP will be delivered soon on </string>
+    <string name="sentence_enterName_fragment">Enter Your Business Name </string>
+    <string name="sentence_support_fragment">Enter Your Business Name &amp;</string>
+    <string name="sentence_Profile_fragment">Profile name will be visible to your customer</string>
+
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

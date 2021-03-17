@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeFragments.TabFragments.CustomerPersonFragment">
+
+    <TextView
+        android:id="@+id/tvAddName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/black"
+        android:layout_marginStart="30dp"
+        android:drawableEnd="@drawable/arrow_forward_24"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:id="@+id/customerBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/arrow_forward_24"
+        />
+
+    <TextView
+        android:id="@+id/tvViewProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View Profile"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/deep_green"
+        android:layout_marginStart="30dp"
+        app:layout_constraintTop_toBottomOf="@id/tvAddName"
+        android:textSize="10sp"
+        />
+
+    <TextView
+        android:id="@+id/vNameRectangle"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/light_grey_rec"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@id/tvViewProfile"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_messages"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vNameRectangle"
+        app:layout_constraintBottom_toTopOf="@id/linearSend"
+        tools:listitem="@layout/fragment_item_customer" />
+
+    <LinearLayout
+        android:id="@+id/linearReceive"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        >
+
+        <EditText
+            android:id="@+id/etReceiveMoney"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:hint="Add Money"
+            android:layout_marginBottom="25dp"
+            android:inputType="number"
+            />
+
+        <Button
+            android:id="@+id/btnReceive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/white_grey_rec"
+            android:drawableStart="@drawable/ic_baseline_arrow_downward_24"
+            android:drawablePadding="5dp"
+            android:paddingStart="25dp"
+            android:paddingEnd="25dp"
+            android:text="Received"
+            android:textAllCaps="false"
+            android:textColor="@color/deep_green"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearSend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/linearReceive"
+        app:layout_constraintStart_toStartOf="parent"
+        >
+
+        <EditText
+            android:id="@+id/etSendMoney"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:hint="Add Money"
+            android:layout_marginBottom="25dp"
+            android:inputType="number"
+            />
+
+        <Button
+            android:id="@+id/btnSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/white_grey_rec"
+            android:drawableStart="@drawable/ic_baseline_arrow_upward_24"
+            android:drawablePadding="5dp"
+            android:paddingStart="25dp"
+            android:paddingEnd="25dp"
+            android:text="Send"
+            android:textAllCaps="false"
+            android:textColor="@color/red"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

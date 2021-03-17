@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ProfileActivity">
+
+    <TextView
+        android:id="@+id/toolBarProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/drawer_rectangle"
+        android:text="Profile"
+        android:drawablePadding="10dp"
+        android:textSize="20sp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_margin="17dp"
+        android:drawableStart="@drawable/arrow_back_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolBarProfile"
+        android:background="@drawable/light_grey_rec"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/dPerson"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/ic_baseline_perm_identity_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolBarProfile" />
+
+    <TextView
+        android:id="@+id/BusinessNameTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:text="Business Name"
+        app:layout_constraintStart_toEndOf="@id/dPerson"
+        app:layout_constraintTop_toBottomOf="@id/toolBarProfile" />
+
+    <TextView
+        android:id="@+id/businessName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:text="divt"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_constraintStart_toEndOf="@id/dPerson"
+        app:layout_constraintTop_toBottomOf="@id/BusinessNameTitle" />
+
+    <TextView
+        android:id="@+id/declaration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/sentence_Profile_fragment"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@id/dPerson"
+        app:layout_constraintTop_toBottomOf="@id/businessName" />
+
+    <TextView
+        android:id="@+id/tvd1"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/next_rectaangle_green"
+        app:layout_constraintStart_toEndOf="@id/dPerson"
+        app:layout_constraintTop_toBottomOf="@id/declaration" />
+
+
+    <TextView
+        android:id="@+id/dMobile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/ic_baseline_phone_android_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvd1" />
+
+    <TextView
+        android:id="@+id/mobileTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:text="Mobile Number"
+        app:layout_constraintStart_toEndOf="@id/dMobile"
+        app:layout_constraintTop_toBottomOf="@id/tvd1" />
+
+    <TextView
+        android:id="@+id/mobileNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:text="divt"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_constraintStart_toEndOf="@id/dMobile"
+        app:layout_constraintTop_toBottomOf="@id/mobileTitle" />
+
+    <TextView
+        android:id="@+id/tvd2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/next_rectaangle_green"
+        app:layout_constraintStart_toEndOf="@id/dMobile"
+        app:layout_constraintTop_toBottomOf="@id/mobileNumber" />
+
+    <TextView
+        android:id="@+id/dBusiness"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/ic_baseline_business_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvd2" />
+
+    <TextView
+        android:id="@+id/businessTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:text="Business Type"
+        app:layout_constraintStart_toEndOf="@id/dMobile"
+        app:layout_constraintTop_toBottomOf="@id/tvd2" />
+
+    <TextView
+        android:id="@+id/retailShop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:text="Retail Shop"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_constraintStart_toEndOf="@id/dMobile"
+        app:layout_constraintTop_toBottomOf="@id/businessTitle" />
+
+
+    <TextView
+        android:id="@+id/tvd3"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/next_rectaangle_green"
+        app:layout_constraintStart_toEndOf="@id/dMobile"
+        app:layout_constraintTop_toBottomOf="@id/retailShop" />
+
+    <TextView
+        android:id="@+id/dCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/ic_baseline_business_24"
+        app:layout_constraintTop_toBottomOf="@id/tvd3"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/CategoryTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:text="Category"
+        app:layout_constraintStart_toEndOf="@id/dPerson"
+        app:layout_constraintTop_toBottomOf="@id/tvd3" />
+
+    <TextView
+        android:id="@+id/electronic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:text="Electronic"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_constraintStart_toEndOf="@id/dPerson"
+        app:layout_constraintTop_toBottomOf="@id/CategoryTitle" />
+
+    <TextView
+        android:id="@+id/tvd4"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/next_rectaangle_green"
+        app:layout_constraintStart_toEndOf="@id/dPerson"
+        app:layout_constraintTop_toBottomOf="@id/electronic" />
+
+    <TextView
+        android:id="@+id/dInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/ic_baseline_info_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvd4" />
+
+    <TextView
+        android:id="@+id/InfoTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:text="Other Info"
+        app:layout_constraintStart_toEndOf="@id/dMobile"
+        app:layout_constraintTop_toBottomOf="@id/tvd4" />
+
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:text="Email, About, Name"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_constraintStart_toEndOf="@id/dMobile"
+        app:layout_constraintTop_toBottomOf="@id/InfoTitle" />
+
+
+    <TextView
+        android:id="@+id/tvd5"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/next_rectaangle_green"
+        app:layout_constraintStart_toEndOf="@id/dMobile"
+        app:layout_constraintTop_toBottomOf="@id/info" />
+
+    <TextView
+        android:id="@+id/dCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/ic_baseline_card_membership_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvd5" />
+
+    <TextView
+        android:id="@+id/cardTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:text="Business Card"
+        app:layout_constraintStart_toEndOf="@id/dMobile"
+        app:layout_constraintTop_toBottomOf="@id/tvd5" />
+
+    <TextView
+        android:id="@+id/card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:text="Share your business card "
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_constraintStart_toEndOf="@id/dMobile"
+        app:layout_constraintTop_toBottomOf="@id/cardTitle" />
+
+    <TextView
+        android:id="@+id/tvd6"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/next_rectaangle_green"
+        app:layout_constraintStart_toEndOf="@id/dMobile"
+        app:layout_constraintTop_toBottomOf="@id/card" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

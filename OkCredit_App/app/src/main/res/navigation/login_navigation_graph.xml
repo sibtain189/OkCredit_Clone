@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_navigation_graph"
+    app:startDestination="@id/selectLanguageFragment">
+
+    <fragment
+        android:id="@+id/selectLanguageFragment"
+        android:name="com.example.okcredit_app.SelectLanguageFragment"
+        android:label="Select Language"
+        tools:layout="@layout/fragment_select_language">
+        <action
+            android:id="@+id/action_selectLanguageFragment_to_verifyMobileFragment"
+            app:destination="@id/verifyMobileFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/verifyMobileFragment"
+        android:name="com.example.okcredit_app.VerifyMobileFragment"
+        android:label="Verify Mobile"
+        tools:layout="@layout/fragment_verify_mobile">
+        <action
+            android:id="@+id/action_verifyMobileFragment_to_giveNumberFragment"
+            app:destination="@id/giveNumberFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/giveNumberFragment"
+        android:name="com.example.okcredit_app.GiveNumberFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_give_number">
+        <action
+            android:id="@+id/action_giveNumberFragment_to_OTPFragment4"
+            app:destination="@id/OTPFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_giveNumberFragment_to_enterNameFragment6"
+            app:destination="@id/enterNameFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/OTPFragment"
+        android:name="com.example.okcredit_app.OTPFragment"
+        android:label="OTP"
+        tools:layout="@layout/fragment_otp">
+        <argument
+            android:name="receiver"
+            app:argType="string" />
+
+        <argument
+            android:name="number"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_OTPFragment_to_enterNameFragment"
+            app:destination="@id/enterNameFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/enterNameFragment"
+        android:name="com.example.okcredit_app.EnterNameFragment"
+        android:label="Name"
+        tools:layout="@layout/fragment_enter_name">
+        <action
+            android:id="@+id/action_enterNameFragment_to_homeActivity2"
+            app:destination="@id/homeActivity2"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+      />
+        <argument
+            android:name="number"
+            app:argType="string" />
+    </fragment>
+    <activity
+        android:id="@+id/homeActivity2"
+        android:name="com.example.okcredit_app.HomeActivity"
+        android:label="activity_home"
+        tools:layout="@layout/activity_home" />
+</navigation>

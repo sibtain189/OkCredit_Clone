@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/accountFragment"
+        android:icon="@drawable/ic_baseline_account_circle_24"
+        android:title="Account"
+        />
+
+    <item
+        android:id="@+id/settingFragment"
+        android:icon="@drawable/ic_baseline_settings_24"
+        android:title="Setting"
+        />
+
+    <item
+        android:id="@+id/shareFragment"
+        android:icon="@drawable/ic_baseline_share_24"
+        android:title="Share"
+        />
+
+    <item
+        android:id="@+id/helpSupportFragment"
+        android:icon="@drawable/ic_baseline_help_outline_24"
+        android:title="Help &amp; Support"
+        />
+
+
+</menu>

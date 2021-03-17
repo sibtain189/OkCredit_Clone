@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SelectLanguageFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        android:paddingBottom="110dp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+
+                android:id="@+id/tvWelcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="40dp"
+                android:drawableStart="@drawable/ic_please_icon"
+                android:drawablePadding="5dp"
+                android:text="Welcome"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+
+                android:id="@+id/tvLanguage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Select your Language"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvWelcome" />
+
+
+            <CheckedTextView
+                android:id="@+id/ivEnglish"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/english"
+                android:checkMark="?android:listChoiceIndicatorMultiple"
+                android:checked="false"
+                app:layout_constraintEnd_toStartOf="@id/ivHindi"
+                app:layout_constraintStart_toStartOf="parent"
+
+                app:layout_constraintTop_toBottomOf="@id/tvLanguage" />
+
+            <CheckedTextView
+                android:id="@+id/ivHindi"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/hindi_lan"
+                android:checkMark="?android:listChoiceIndicatorMultiple"
+                android:checked="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ivEnglish"
+                app:layout_constraintTop_toBottomOf="@id/tvLanguage" />
+
+            <CheckedTextView
+                android:id="@+id/ivMarathi"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/marathi_lan"
+                android:checkMark="?android:listChoiceIndicatorMultiple"
+                android:checked="false"
+                android:elevation="10dp"
+                app:layout_constraintEnd_toStartOf="@id/ivHinglish"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivEnglish" />
+
+            <CheckedTextView
+                android:id="@+id/ivHinglish"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/hinglish_lang"
+                android:checkMark="?android:listChoiceIndicatorMultiple"
+                android:checked="false"
+                android:elevation="10dp"
+                android:src="@drawable/hinglish_lang"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ivMarathi"
+                app:layout_constraintTop_toBottomOf="@id/ivHindi" />
+
+            <CheckedTextView
+                android:id="@+id/ivGujrati"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_margin="10dp"
+                android:layout_marginTop="108dp"
+                android:background="@drawable/gujrati"
+                android:checkMark="?android:listChoiceIndicatorMultiple"
+                android:checked="false"
+                android:src="@drawable/gujrati"
+                app:layout_constraintEnd_toStartOf="@id/ivTamil"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivMarathi" />
+
+            <CheckedTextView
+                android:id="@+id/ivTamil"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/tamil"
+                android:checkMark="?android:listChoiceIndicatorMultiple"
+                android:checked="false"
+                android:src="@drawable/tamil"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ivGujrati"
+                app:layout_constraintTop_toBottomOf="@id/ivHinglish" />
+
+            <CheckedTextView
+                android:id="@+id/ivTelugu"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/telugu"
+                android:checkMark="?android:listChoiceIndicatorMultiple"
+                android:checked="false"
+                android:src="@drawable/telugu"
+                app:layout_constraintEnd_toStartOf="@id/ivPunjabi"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivGujrati" />
+
+            <CheckedTextView
+                android:id="@+id/ivPunjabi"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/punjabi"
+                android:checkMark="?android:listChoiceIndicatorMultiple"
+                android:checked="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ivTelugu"
+                app:layout_constraintTop_toBottomOf="@id/ivTamil" />
+
+            <CheckedTextView
+                android:id="@+id/ivMalyalam"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/malyalam"
+                android:checkMark="?android:listChoiceIndicatorMultiple"
+                android:checked="false"
+                app:layout_constraintEnd_toStartOf="@id/ivKannada"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivTelugu" />
+
+            <CheckedTextView
+                android:id="@+id/ivKannada"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/kannada"
+                android:checkMark="?android:listChoiceIndicatorMultiple"
+                android:checked="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ivMalyalam"
+                app:layout_constraintTop_toBottomOf="@id/ivPunjabi" />
+
+            <CheckedTextView
+                android:id="@+id/ivBangla"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/bangla"
+                android:checkMark="?android:listChoiceIndicatorMultiple"
+                android:checked="false"
+                app:layout_constraintEnd_toStartOf="@id/ivFlana"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivMalyalam" />
+
+            <CheckedTextView
+                android:id="@+id/ivFlana"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_margin="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ivBangla"
+                app:layout_constraintTop_toBottomOf="@id/ivKannada" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/white_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/tvNext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@drawable/next_rectaangle_green"
+        android:drawableEnd="@drawable/ic_baseline_arrow_forward_24"
+        android:paddingStart="25dp"
+        android:paddingTop="15dp"
+        android:paddingEnd="15dp"
+        android:paddingBottom="15dp"
+        android:text="NEXT"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".HomeFragments.TabFragments.AddSupplierFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:text="New Supplier"
+        android:textColor="@color/black"
+        android:background="@drawable/light_grey_rec"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_baseline_person_add_alt_1_24"/>
+    <EditText
+        android:id="@+id/etAddName"
+        android:layout_width="match_parent"
+        android:layout_marginStart="5dp"
+        android:layout_height="wrap_content"
+        android:hint="Name"
+        />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="@drawable/light_grey_rec"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_baseline_phone_android_24"/>
+        <EditText
+            android:id="@+id/etAddNumber"
+            android:layout_width="match_parent"
+            android:layout_marginStart="5dp"
+            android:layout_height="wrap_content"
+            android:hint="Number"
+            />
+
+    </LinearLayout>
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:background="@drawable/light_grey_rec">
+
+       <Button
+           android:id="@+id/btnOK"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_alignParentBottom="true"
+           android:paddingStart="50dp"
+           android:drawableStart="@drawable/ic_baseline_done_24"
+           android:paddingEnd="50dp"
+           android:layout_margin="25dp"
+           android:textColor="@color/white"
+           android:layout_alignParentEnd="true"
+           android:background="@drawable/next_rectaangle_green"
+           android:text="OK"/>
+   </RelativeLayout>
+
+</LinearLayout>

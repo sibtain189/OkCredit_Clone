@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".OTPFragment">
+
+ <TextView
+     android:id="@+id/tvPlease"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toTopOf="parent"
+     android:text="Please be patient"
+     android:textColor="@color/black"
+     android:textSize="25sp"
+     android:textStyle="bold"
+     android:layout_marginTop="40dp"
+     android:layout_marginStart="20dp"/>
+
+    <TextView
+        android:id="@+id/tvSentence"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPlease"
+        android:textSize="15sp"
+        android:textColor="@color/black_gray"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"/>
+
+    <TextView
+        android:id="@+id/tvEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/green_rec_edit_mobile"
+        android:textSize="12sp"
+        android:drawableStart="@drawable/ic_baseline_edit_24"
+        android:drawablePadding="5dp"
+        android:paddingTop="7dp"
+        android:paddingStart="15dp"
+        android:paddingBottom="7dp"
+        android:paddingEnd="15dp"
+        android:text="Edit Mobile"
+        android:textColor="@color/deep_green"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintTop_toBottomOf="@id/tvSentence"/>
+
+    <ImageView
+        android:id="@+id/ivUmbrella"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/umbrella_pic"
+        app:layout_constraintTop_toBottomOf="@id/tvEdit"
+        android:layout_marginTop="10dp"/>
+
+    <com.chaos.view.PinView
+        android:id="@+id/pinView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:itemCount="6"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:itemBackground="@color/white"
+        android:cursorVisible="true"
+        android:textColor="@color/deep_green"
+        app:lineColor="@color/black"
+        android:inputType="number"
+        app:itemRadius="5dp"
+        style="@style/PinWidget.PinView"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/ivUmbrella"/>
+
+    <Button
+        android:id="@+id/btnVerify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="35dp"
+        android:text="Verify"
+        android:textColor="@color/white"
+        android:paddingEnd="80dp"
+        android:background="@drawable/next_rectaangle_green"
+        android:paddingStart="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pinView"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
